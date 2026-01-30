@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="The Best website for unblocked games!">
+  <meta name="keywords" content="Games, Unblocked Games, Unity, WebGL">
+  <meta name="author" content="Lexerd63">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lexerd63's Game Database</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #1e1e1e;
+      color: #fff;
+    }
+
+    .heading {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .heading h1 {
+      margin: 0;
+      color: #00ffae;
+    }
+
+    .nav {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+      background-color: #2c2c2c;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #00ffae;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    #searchBar {
+      display: block;
+      margin: 20px auto;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      width: 90%;
+      max-width: 400px;
+      background-color: #303134;
+      color: #ffffff;
+      font-size: 1rem;
+    }
+
+    /* GAME GRID */
+    #gameList {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .game {
+      background: #2c2c2c;
+      border-radius: 12px;
+      text-decoration: none;
+      color: white;
+      overflow: hidden;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .game:hover {
+      background: #00ffae;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    .game img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .game-title {
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #2c2c2c;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #00ffae;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="heading">
+    <h1>Lexerd63 Game Database</h1>
+  </div>
+
+  <!-- NAV -->
+  <div class="nav">
+    <button onclick="showSection('games')">Games</button>
+    <button onclick="showSection('exploits')">Exploits</button>
+  </div>
+
+  <!-- GAMES SECTION -->
+  <div id="gamesSection">
+    <input type="text" id="searchBar" placeholder="Search games..." onkeyup="filterGames()">
+
+    <div id="gameList">
+
+      <a class="game" href="1v1">
+    <img src="https://cdn2.steamgriddb.com/hero_thumb/7bbe1e12c5d9f0798b0c532ab6f4aa8c.jpg">
+    <div class="game-title">1v1</div>
+  </a>
+
+  <a class="game" href="adanceoffireandice">
+    <img src="https://i1.sndcdn.com/avatars-tR5si7zIZpqWXnC7-fbpkCg-t240x240.jpg">
+    <div class="game-title">A Dance Of Fire And Ice</div>
+  </a>
+
+  <a class="game" href="baconmaydie">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCZUtJcUxCGiuvO_8-7w89WRanhdEhMoVkXXrEjQwKEg&s&ec=121507562">
+    <div class="game-title">Bacon May Die</div>
+  </a>
+
+  <a class="game" href="bitlife">
+    <img src="https://play-lh.googleusercontent.com/fUM-UyywXxjC8soxAZdIlxJrlRRXmql8wkE426SHzft4lJycSKVd2jCYQQX1BEG9Xw">
+    <div class="game-title">Bitlife</div>
+  </a>
+
+  <a class="game" href="bobtherobber2">
+    <img src="https://static.wikia.nocookie.net/bobtherobbertogo/images/a/a0/Logo.webp/revision/latest/thumbnail/width/360/height/360?cb=20251125233016">
+    <div class="game-title">Bob the Robber 2</div>
+  </a>
+
+  <a class="game" href="candycrush">
+    <img src="https://images5.alphacoders.com/855/855983.jpg">
+    <div class="game-title">Candy Crush</div>
+  </a>
+
+  <a class="game" href="cheesechompers3d">
+    <img src="https://i.ytimg.com/vi/zU0L5ueGA3o/mqdefault.jpg">
+    <div class="game-title">Cheese Chompers 3D</div>
+  </a>
+
+  <a class="game" href="crazycattle3d">
+    <img src="https://i1.sndcdn.com/artworks-mj8r3dX5yWoeiUQL-3yWcnQ-t500x500.jpg">
+    <div class="game-title">Crazy Cattle 3D</div>
+  </a>
+
+  <a class="game" href="cuphead">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsN-jzwkVYy9an6j-RbYwKDQRp7CHu75AlopXNMeZ9IKaGtvjBtH2t2vJEIHge8qB0pkanTOFSFNerpw&s=10&ec=121507562">
+    <div class="game-title">Cuphead</div>
+  </a>
+
+  <a class="game" href="dogeminer">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXUBWE_IoRr3akBOJxEeeLxT_4-B6hsS7RQCzKfw1jCB1NneiHtMObg9RHiuIjcqm62c5hY24SI_-kR3CIXWirabuXjz1vOW3DwAlyaiwKWtLsMg&s=10&ec=121507562">
+    <div class="game-title">Dogeminer</div>
+  </a>
+
+  <a class="game" href="fearstofanthom">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeUD3dUklz72gnv4W3Iqal-lNegYSmPpCV7lPhWlb4AO89OrU:https://lh3.googleusercontent.com/sitesv/AAzXCkc-akiFToj-LBTzFxBWLJkU1l6Pq1rKBzMS2iyuLuvCw8JNN87yoBS11WzuIEzJj2Dh-UKR0HNG2LR6k4JmTKoiFpZk_G6i0OUYzLEjMl-JSZFeCwRntR-ytWDDgBkHzl6K4xEwxsq5zXxDDhC-iB_A16AI9Vsyxugouty_nZDn26xeEbk3QYw33ZPEc3R9vcnjF3wgS9PH7CoRficNJ25TsVhu6BWMU6d4LUE%3Dw1280&s">
+    <div class="game-title">Fears to Fanthom</div>
+  </a>
+
+  <a class="game" href="finalfantasyVIII">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTTKUreOQqYT0b6fXrWumbZQ5vhc5u8OKaOv9VY8pCVCTb49M16n_dCDlzVBxYA6rAshmDZtUuj50ZaM0saSLBh00pggQnYVt4NjkrIo3-c_a2cQ&s=10&ec=121507562">
+    <div class="game-title">Final Fantasy VIII</div>
+  </a>
+
+  <a class="game" href="forkandsausage">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnFv2bI4icWZsBNwE7ZOQh1mLR1LhF5OK2ZCA2yN3jeArqz4myka4OxcRlEhSNXMYnYo4n9KGdhaPVAgFO2VCQzzy_lrEaG2Ks177NzLqUAQVQR44&s=10&ec=121507562">
+    <div class="game-title">Fork and Sausage</div>
+  </a>
+
+  <a class="game" href="geometrydashlite">
+    <img src="https://play-lh.googleusercontent.com/p7kWbWBFxQIrzolEqiV5uSvctLeyssZvBV7UBOX29wzZI52IdcSs4qCB_zsQJL1mt9A=w600-h300-pc0xffffff-pd">
+    <div class="game-title">Geometry Dash</div>
+  </a>
+
+  <a class="game" href="granny3">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrtHDUkeAsFeMoWt53JF2QEmmOY3FTus4JrPJcstOJfBCq91WS05KERTgU_0PcxYtUwvCYfrmcsmOevQ&s=10&ec=121507562">
+    <div class="game-title">Granny 3</div>
+  </a>
+
+  <a class="game" href="halflife">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0hxhvRjtsv94i_Cvqj6Nq3Ry1rHNplmcaQSg4T0O6GuWWofmKcQopFYjtK4VkG88c1wFY7Zg_0K9yyHroC01shz1knY1Rwe4o3cALiM-8HpWu2aE&s&ec=121507562">
+    <div class="game-title">Half Life</div>
+  </a>
+
+  <a class="game" href="hollowknight">
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/04/Hollow_Knight_first_cover_art.webp">
+    <div class="game-title">Hollow Knight</div>
+  </a>
+
+  <a class="game" href="hotlinemiami">
+    <img src="https://m.media-amazon.com/images/M/MV5BOWRlM2RkMjktYWQzMi00YmIxLTkyMWUtOTI0ZWRmODE1N2U5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg">
+    <div class="game-title">Hotline Miami</div>
+  </a>
+
+  <a class="game" href="legendofzelda">
+    <img src="https://assets-prd.ignimgs.com/2020/09/04/the-legend-of-zelda-ocarina-of-time-3d-button-1599258293229.jpg">
+    <div class="game-title">Legend of Zelda 64</div>
+  </a>
+
+  <a class="game" href="minecraft1.5.2">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXLKEIz57pxITCLBi40VBAA6WqN3sJM0sY-S8B_V8SqVNwg57ivKzlIMfZsR_M6V1nscYTBtSdUajg&s=10&ec=121507562">
+    <div class="game-title">Minecraft 1.5.2</div>
+  </a>
+
+  <a class="game" href="minecraft1.21">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXLKEIz57pxITCLBi40VBAA6WqN3sJM0sY-S8B_V8SqVNwg57ivKzlIMfZsR_M6V1nscYTBtSdUajg&s=10&ec=121507562">
+    <div class="game-title">Minecraft 1.21</div>
+  </a>
+
+  <a class="game" href="peopleplayground">
+    <img src="https://ih1.redbubble.net/image.3632474134.9680/st,small,845x845-pad,1000x1000,f8f8f8.u1.jpg">
+    <div class="game-title">People Playground</div>
+  </a>
+
+  <a class="game" href="ragdollarchers">
+    <img src="https://play-lh.googleusercontent.com/XMiWEMPbuq13oVcwYQ6ySLtZnBf7WpJ3rb7v-TM4MdFOvWfo1Z2hzSEAApRXzEcshjY">
+    <div class="game-title">Ragdoll Archers</div>
+  </a>
+
+  <a class="game" href="repo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLe7UneOeYdpA4LhR5a97PX37mSxl2zvzYqsVZ3BwY9WvAsUYpvPueh9pFnNaUi9Mh_kLmiHuprjj_&s=10&ec=121507562">
+    <div class="game-title">R.E.P.O</div>
+  </a>
+
+  <a class="game" href="sm64">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7iZdGuRP1x-19SiL-WkImCl6OepfRxj--TE9vd1JuJKS0hd0VPeePGFVHqTFzvytrszkEr6rJcjUT8a4-Tp6XhBtRPe4j65-dUuIXuDpKhP2MB1o&s=10&ec=121507562">
+    <div class="game-title">Super Mario 64</div>
+  </a>
+
+  <a class="game" href="stickmanhook">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7iB3dR598o_nnlsnCDsL9TGot52pUCQPDNKJuyQMnM-y0HAovF1DeLY3VvmyNYTPj3emWASWiRAefJA&s=10&ec=121507562">
+    <div class="game-title">Stickman Hook</div>
+  </a>
+
+  <a class="game" href="terraria">
+    <img src="https://upload.wikimedia.org/wikipedia/en/1/1a/Terraria_Steam_artwork.jpg">
+    <div class="game-title">Terraria</div>
+  </a>
+
+  <a class="game" href="thatsnotmyneighbor">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnjtbai4yqFBC9H_X7Mbm5_yAHLmzjnRDFsQA7xPyjJ3jg2o_S8xquX3GmtdJT69asT0JsiqqO1vZZGw&s=10&ec=121507562">
+    <div class="game-title">That's Not My Neighbor</div>
+  </a>
+
+  <a class="game" href="theimpossiblequiz">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReilVKBYYQcqCIABv429wkKNaZ18ocNudpqjVdvfYkiVuJ661mWza83hOGhnyHkprri-yI-HgiUchoqfOotyp6gNs-FTq6xqUQ1_pDPICZikM0MtI&s=10&ec=121507562">The Impossible Quiz</div>
+  </a>
+    </div>
+
+    <p style="text-align:center;">(Games actively being added!)</p>
+  </div>
+
+  <!-- EXPLOITS SECTION -->
+  <div id="exploitsSection" style="display:none; text-align:center; padding:40px;">
+    <h2 style="color:#00ffae;">Exploits</h2>
+    <p>Don't cook your chromebook</p>
+
+    <div id="gameList">
+      
+      <a class="game" href="caudns">
+        <div class="game-title">CauDNS</div>
+      </a>
+
+       <a class="game" href="sh1mmer">
+        <div class="game-title">Sh1mmer</div>
+      </a>
+
+      <a class="game" href="br1ck">
+        <div class="game-title">Br1ck</div>
+      </a>
+
+      <a class="game" href="dextensify">
+        <div class="game-title">Dextensify</div>
+      </a>
+      
+    </div>
+  </div>
+
+  <footer>
+    <a href="https://github.com/Lexerd63">Source Code</a>
+  </footer>
+
+  <script>
+    function showSection(section) {
+      document.getElementById("gamesSection").style.display =
+        section === "games" ? "block" : "none";
+      document.getElementById("exploitsSection").style.display =
+        section === "exploits" ? "block" : "none";
+    }
+
+    function filterGames() {
+      const input = document.getElementById("searchBar").value.toLowerCase();
+      document.querySelectorAll(".game").forEach(game => {
+        game.style.display = game.textContent.toLowerCase().includes(input)
+          ? ""
+          : "none";
+      });
+    }
+  </script>
+
+</body>
+</html>
