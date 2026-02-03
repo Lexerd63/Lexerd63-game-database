@@ -1,0 +1,250 @@
+<div id="started">
+	<div class="cont">
+		<b
+			><h2>instructions (READ CAREFULLY)</h2>
+			<br>
+			<li>Go to chrome://network#state</li>
+			<li>find the wifi you are connected to.</li>
+			<li> Press the plus by it, and copy everything inside the box that just showed up.</li> 
+			<li>Paste it inside the input on this website.</li>
+			<br> I AM NOT RESPONSIBLE FOR ANYTHING THAT HAPPENS.
+		</b>
+	</div>
+</div>
+<input type="text" id="input" placeholder="read the instructions.">
+<div style="position:absolute;bottom:5px;z-index:99999;" id="credits">
+	<a href="https://github.com/dragon731012">Coded by Potato.</a>
+	<br>
+	Credits to Caub and OmadaDNS
+</div>
+<button id="button" onclick="load();">Download</button>
+<div id="finished">
+	<div class="cont">
+		<b>
+			<li>Now, go to chrome://network and scroll down to the import onc file button. </li>
+			<li>extract the zip and upload the kill.onc file. </li>
+			whenever you want to reenable the extensions, use revive.onc. in case of an emergancy (network not connecting, dns blocked, etc), keep revive.onc and upload it when nesasary. <br>if revive dosn't work, use chrome://restart than try.
+		</b>
+	</div>
+</div>
+<div id="advancedbutton" onclick="adv();">Advanced +</div>
+<div id="advanced" data-pos="down" style="border-top:3px solid white;animation-fill-mode: both;display:block;text-align:center;flex-direction: column;align-items:center;">
+	<div class="switchtext">
+		<b style="display:flex;font-size:20px;padding-right:10px;">caub - </b>
+		<label class="switch" style="display:flex;">
+		  <input type="checkbox" id="caub" checked>
+		  <span class="slider round"></span>
+		</label>
+	</div>
+	<div class="switchtext" style="flex-direction: column;">
+		<input class="smallinput" style="margin-bottom:5px;" id="ip1" placeholder="enter ip" type="text">
+		<input class="smallinput" style="margin-bottom:5px;" id="ip2" placeholder="enter ip" type="text">
+		<input class="smallinput" style="margin-bottom:5px;" id="ip3" placeholder="enter ip" type="text">
+		<input class="smallinput" style="margin-bottom:5px;" id="ip4" placeholder="enter ip" type="text">
+	</div>
+	<!--
+	<div class="switchtext">
+		<b style="display:flex;font-size:20px;padding-right:10px;">proxy - </b>
+		<select name="proxy" id="proxy">
+		  <option value="direct">Direct</option>
+		  <option value="ftp">ftp</option>
+		  <option value="http">http</option>
+		  <option value="https">https</option>
+		</select>
+	</div>
+	<div id="proxysettings" class="switchtext" style="display:none;">
+		<input class="smallinput" id="hostinput" placeholder="localhost" type="text">
+		<input id="portinput" placeholder="port" type="text">
+	</div>
+	-->
+</div>
+<style>
+	.smallinput{
+		width:25%;
+		font-size:15px;
+		text-align:left;
+		background:transparent;
+		color:white;
+		padding:5px;
+		border:3px solid white;
+		border-radius:25px;
+	}
+	#portinput{
+		width:10%;
+		font-size:15px;
+		text-align:left;
+		background:transparent;
+		color:white;
+		padding:5px;
+		border:3px solid white;
+		border-radius:25px;
+	}
+	#proxy{
+		display: flex;
+		color: white;
+	    	background-color: black;
+	    	border: 3px solid white;
+	    	border-radius: 25px;
+	    	outline: none;
+	}
+	.switchtext{
+		display:flex;
+		flex-direction: row;
+		align-items:center;
+		color:white;
+		justify-content:center;
+		margin:50px;
+	}
+	a{
+                color:inherit;
+		text-decoration:inherit;
+        }
+	#started{
+		display:block;
+	}
+	#finished{
+		background:black;
+		display:none;
+	}
+	.cont{
+		position:absolute;
+		top:5px;
+		font-size:20px;
+		width:70%;
+		left:15%;
+	}
+	body{
+		color:white;
+		text-align:center;
+		background:black;
+		overflow:hidden;
+	}
+	.switch {
+		position: relative;
+		display: inline-block;
+		width: 53px;
+    		height: 28px;
+		border: 5px solid white;
+		border-radius:25px;
+	}
+	
+	.switch input { 
+		opacity: 0;
+		width: 0;
+		height: 0;
+	}
+	
+	.slider {
+		position: absolute;
+		cursor: pointer;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: transparent;
+		-webkit-transition: .4s;
+		transition: .4s;
+	}
+	
+	.slider:before {
+		position: absolute;
+		content: "";
+	 	height: 20px;
+	 	width: 20px;
+	  	left: 4px;
+	  	bottom: 4px;
+	  	background-color: white;
+	  	-webkit-transition: .4s;
+	  	transition: .4s;
+	}
+	
+	input:checked + .slider {
+	  	background:transparent;
+	}
+	
+	input:focus + .slider {
+	  	box-shadow: 0 0 1px #2196F3;
+	}
+	
+	input:checked + .slider:before {
+	  	-webkit-transform: translateX(26px);
+	  	-ms-transform: translateX(26px);
+	  	transform: translateX(26px);
+	}
+	
+	.slider.round {
+	  	border-radius: 34px;
+		outline: none;
+	}
+	
+	.slider.round:before {
+	  	border-radius: 50%;
+	}
+	
+	#input{
+		display:block;
+		width:50%;
+		position:absolute;
+		left:25%;
+		bottom:43%;
+		font-size:20px;
+		text-align:left;
+		background:transparent;
+		color:white;
+		padding:5px;
+		border:3px solid white;
+		border-radius:25px;
+	}
+	::placeholder{
+		color:white;
+	}
+	button{
+		position:absolute;
+		bottom:27%;
+		display:block;
+		text-align:center;
+		background:transparent;
+		color:white;
+		border:3px solid white;
+		border-radius:25px;
+		font-size:20px;
+		padding:8.5px;
+	}
+	#advancedbutton{
+		position:absolute;
+		top:5px;
+		left:5px;
+		display:block;
+		text-align:center;
+		background:black;
+		color:white;
+		font-size:15px;
+		cursor:pointer;
+		z-index:15;
+	}
+	#advanced{
+		width:100%;
+		height:100%;
+		position:absolute;
+		background-color:black;
+		top:100%;
+		left:0px;
+		z-index:10;
+	}
+	@keyframes slideup{
+		0%{
+			top:100%;
+		}
+		100%{
+			top:0%;
+		}
+	}
+	@keyframes slidedown{
+		0%{
+			top:0%;
+		}
+		100%{
+			top:100%;
+		}
+	}
+</style>
