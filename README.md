@@ -9,7 +9,7 @@ Currently a work in progress
 
 
 
-Thanks to 
+Thanks to:
 
 
 
@@ -38,4 +38,9 @@ Thanks to
 
 
 
-More tba soon!
+
+This was absoulute pain to make
+
+
+
+More tba soon
