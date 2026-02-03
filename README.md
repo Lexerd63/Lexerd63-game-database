@@ -44,3 +44,9 @@ This was absoulute pain to make
 
 
 More tba soon
+
+
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Lexerd63/Lexerd63-game-database&type=date&legend=top-left)](https://www.star-history.com/#Lexerd63/Lexerd63-game-database&type=date&legend=top-left)
